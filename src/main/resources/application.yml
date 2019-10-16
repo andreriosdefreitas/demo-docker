@@ -5,6 +5,7 @@ spring:
     schema:
     data:
     url:
+    initialization-mode: always
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     database: MYSQL
@@ -14,3 +15,6 @@ spring:
       hibernate.cache.use_second_level_cache: false
       hibernate.cache.use_query_cache: false
       hibernate.generate_statistics: true
+    hibernate:
+      ddl-auto: none
+    generate-ddl: false
