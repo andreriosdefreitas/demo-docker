@@ -1,17 +1,10 @@
 spring:
   datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-      url: jdbc:mysql://localhost:3306/demo_db?useUnicode=true&characterEncoding=utf8&useSSL=false
-      username: root
-      password: root
-      hikari:
-        data-source-properties:
-          cachePrepStmts: true
-          prepStmtCacheSize: 250
-          prepStmtCacheSqlLimit: 2048
-          useServerPrepStmts: true
-    schema: /db/schema.sql
-    data: /db/data.sql
+    username:
+    password:
+    schema:
+    data:
+    url:
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     database: MYSQL

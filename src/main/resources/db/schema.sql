@@ -1,3 +1,5 @@
-drop table product if exists;
+use demo_db;
 
-create table product(id integer identity primary key, name varchar(255) not null);
+drop table demo_db.product if exists;
+
+create table demo_db.product(id integer identity primary key, name varchar(255) not null);
