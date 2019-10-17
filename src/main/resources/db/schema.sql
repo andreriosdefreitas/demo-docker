@@ -1,5 +1,8 @@
-use demo_db;
+DROP TABLE IF EXISTS `demo_db`.`product`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 
-drop table demo_db.product if exists;
-
-create table demo_db.product(id integer identity primary key, name varchar(255) not null);
+CREATE TABLE `demo_db`.`product` (
+  `id` INT NOT NULL,
+  `name` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));

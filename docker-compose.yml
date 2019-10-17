@@ -23,20 +23,18 @@ services:
 
   # Database Service (Mysql)
   db:
-    image: mysql:5.7
-    ports:
-      - "3306:3306"
-    restart: always
-    environment:
-      MYSQL_DATABASE: demo_db
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
-      MYSQL_ROOT_PASSWORD: root
+    image: mysql:5.7.22
     volumes:
       - db-data:/var/lib/mysql
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=demo_db
+    ports:
+      - 3306:3306
+    command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8 --explicit_defaults_for_timestamp
     networks:
       - backend
-
 # Volumes
 volumes:
   db-data:
